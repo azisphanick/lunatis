@@ -6,17 +6,7 @@
 
 (def parser
   (insta/parser
-        "sexp = lparen operation rparen
-         <lparen> = <'('>
-         <rparen> = <')'>
-         operation = operator + args
-         operator = '+' | '-' | '*' | '/'
-         args = snumber+ ssexp* 
-         <ssexp>   = space sexp
-         <snumber> = space number
-         <space>  = <#'[ ]*'> 
-         number = #'[0-9]+'
-        "))
+    (clojure.java.io/resource "cenna-grammar.bnf")))
 
 (defn choose-operator [op]
   (case op
