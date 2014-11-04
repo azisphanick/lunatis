@@ -10,6 +10,13 @@
     (recur)))
 
 (defn -main [& args]
+  (println "_________                              ")
+  (println "\\_   ___ \\  ____   ____   ____ _____   ")
+  (println "/    \\  \\/_/ __ \\ /    \\ /    \\\\__  \\")
+  (println "\\     \\___\\  ___/|   |  \\   |  \\/ __ \\_")
+  (println " \\______  /\\___  >___|  /___|  (____  / ")
+  (println "        \\/     \\/     \\/     \\/     \\/")
+  (println "")
   (println "Welcome to Cenna REPL")
   (println "=====================")
   (flush)
