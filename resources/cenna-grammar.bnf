@@ -1,4 +1,4 @@
-sexp = lparen operation rparen
+sexp = lparen operation | speech-acts rparen
 <lparen> = <'('>
 <rparen> = <')'>
 operation = operator + args
@@ -8,3 +8,6 @@ args = snumber+ ssexp*
 <snumber> = space number
 <space>  = <#'[ ]*'>
 number = #'[0-9]+'
+speech-acts = performative + params
+performative = 'out' | 'ask'
+params = vector

@@ -1,6 +1,6 @@
 # cenna
 
-FIXME
+An example of writing a parser using Clojure - taken from Babar tutorial, only uses S-Exp.
 
 ## Usage
 
