@@ -4,7 +4,10 @@ An example of writing a parser using Clojure - taken from Babar tutorial, only u
 
 ## Usage
 
-FIXME
+* Get [Clojure[(http://www.clojure.org)
+* Get [Leiningen](http://www.leiningen.org) to work
+* inside this directory: `lein run`
+* Try some simple arithmetic inside S-Exp: (+ 32 (* 2 3))
 
 ## License
 
