@@ -1,6 +1,6 @@
 # Cenna Project
 
-[Cenna](resources/cenna-logo.png)
+![Cenna](resources/cenna-logo.png)
 
 Welcome to Cenna project.
 
