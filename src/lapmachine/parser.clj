@@ -1,12 +1,12 @@
 ;; in the meantime, it was blatantly stolen from:
 ;; https://gist.github.com/pooster/6221672
 
-(ns cenna.parser
+(ns lapmachine.parser
  (:require [instaparse.core :as insta]))
 
 (def parser
   (insta/parser
-    (clojure.java.io/resource "cenna-grammar.bnf")))
+    (clojure.java.io/resource "lapmachine-grammar.bnf")))
 
 (defn choose-operator [op]
   (case op

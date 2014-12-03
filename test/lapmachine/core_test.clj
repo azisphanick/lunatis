@@ -1,6 +1,6 @@
-(ns cenna.core-test
+(ns lapmachine.core-test
   (:require [clojure.test :refer :all]
-            [cenna.core :refer :all]))
+            [lapmachine.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

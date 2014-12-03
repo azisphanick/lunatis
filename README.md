@@ -1,8 +1,8 @@
-# Cenna Project
+# (LAP)Machine Project
 
-![Cenna](resources/cenna-logo.png)
+![(LAP)Machine](resources/lapmachine-logo.png)
 
-Welcome to Cenna project.
+Welcome to (LAP)Machine project.
 
 ## Usage
 

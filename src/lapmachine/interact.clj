@@ -1,4 +1,4 @@
-(ns cenna.interact
+(ns lapmachine.interact
   (:require [liberator.core :refer [resource defresource]]
             [ring.middleware.params :refer [wrap-params]]
             [compojure.core :refer [defroutes ANY]]))
