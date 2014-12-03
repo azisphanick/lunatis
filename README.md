@@ -1,5 +1,3 @@
-# (LAP)Machine Project
-
 ![(LAP)Machine](resources/lapmachine-logo.png)
 
 Welcome to (LAP)Machine project.
