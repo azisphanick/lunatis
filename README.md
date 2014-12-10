@@ -5,12 +5,9 @@ Welcome to (LAP)Machine project. What's that?, you ask. Well,
 > I'm an idealist. I don't know where I'm going, but I'm on my way.<br/>
 > -- Carl Sandburg
 
-## Usage
+## Documentation
 
-* Get [Clojure](http://www.clojure.org)
-* Get [Leiningen](http://www.leiningen.org) to work
-* inside this directory: `lein run`
-* Try some simple arithmetic inside S-Exp: (+ 32 (* 2 3))
+See [documentation](doc/README.md)
 
 ## License
 
