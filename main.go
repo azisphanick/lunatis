@@ -13,8 +13,9 @@ import (
 )
 
 type Config struct {
-	Title string
-	Port  string
+	Title     string
+	Port      string
+	Staticdir string
 }
 
 func handler(w http.ResponseWriter, req *http.Request) {
@@ -44,7 +45,7 @@ func main() {
 	}
 
 	http.HandleFunc("/display", handler)
-	http.Handle("/", http.FileServer(http.Dir("assets/")))
+	http.Handle("/", http.FileServer(http.Dir(cnf.Staticdir)))
 	fmt.Println(cnf.Title + " serving http request at port " + cnf.Port)
 	http.ListenAndServe(cnf.Port, nil)
 

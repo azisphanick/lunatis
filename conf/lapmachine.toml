@@ -1,2 +1,3 @@
 title="(LAP)Machine"
 port=":8123"
+staticdir="assets/"
