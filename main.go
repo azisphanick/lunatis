@@ -10,12 +10,21 @@ import (
 
 	// non standard pkgs
 	"github.com/bpdp/configo"
+	//	"github.com/gorilla/mux"
 )
 
 type Config struct {
 	Title     string
 	Port      string
 	Staticdir string
+	Routes    struct {
+		Home    HandlerName
+		Display HandlerName
+	}
+}
+
+type HandlerName struct {
+	Handler string
 }
 
 func handler(w http.ResponseWriter, req *http.Request) {
@@ -47,6 +56,8 @@ func main() {
 	http.HandleFunc("/display", handler)
 	http.Handle("/", http.FileServer(http.Dir(cnf.Staticdir)))
 	fmt.Println(cnf.Title + " serving http request at port " + cnf.Port)
+	fmt.Println("Home: " + cnf.Routes.Home.Handler)
+	fmt.Println("Display: " + cnf.Routes.Display.Handler)
 	http.ListenAndServe(cnf.Port, nil)
 
 }

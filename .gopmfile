@@ -1,0 +1,6 @@
+[target]
+path = github.com/bpdp/lapmachine
+
+[deps]
+github.com/bpdp/configo = branch:master
+github.com/gorilla/mux = branch:master

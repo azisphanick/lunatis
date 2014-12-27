@@ -1,3 +1,9 @@
 title="(LAP)Machine"
 port=":8123"
 staticdir="assets/"
+
+[routes]
+[routes.home]
+	handler = "HomeHandler"
+[routes.display]
+	handler = "DisplayHandler"
