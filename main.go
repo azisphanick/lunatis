@@ -4,13 +4,14 @@ import (
 
 	// standard pkgs
 	"fmt"
-	"html/template"
-	"log"
 	"net/http"
 
 	// non standard pkgs
 	"github.com/bpdp/configo"
-	//	"github.com/gorilla/mux"
+
+	// Application specific
+	// routes
+	"app/routes"
 )
 
 type Config struct {
@@ -24,25 +25,7 @@ type Config struct {
 }
 
 type HandlerName struct {
-	Handler string
-}
-
-func handler(w http.ResponseWriter, req *http.Request) {
-
-	t, err := template.ParseFiles("templates/default.tpl")
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	type Person struct {
-		Name string //exported field since it begins with a capital letter
-	}
-
-	p := Person{Name: "bpdp"}
-
-	t.Execute(w, p)
-
+	Handler interface{}
 }
 
 func main() {
@@ -53,11 +36,14 @@ func main() {
 		fmt.Println("Config Load Error: %g", err)
 	}
 
-	http.HandleFunc("/display", handler)
-	http.Handle("/", http.FileServer(http.Dir(cnf.Staticdir)))
+	// routes
+	routes.ExposeRoutes()
+	//
+
 	fmt.Println(cnf.Title + " serving http request at port " + cnf.Port)
-	fmt.Println("Home: " + cnf.Routes.Home.Handler)
-	fmt.Println("Display: " + cnf.Routes.Display.Handler)
+	fmt.Println(cnf.Routes.Home.Handler)
+	fmt.Println(cnf.Routes.Display.Handler)
+
 	http.ListenAndServe(cnf.Port, nil)
 
 }

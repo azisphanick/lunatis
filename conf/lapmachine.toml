@@ -1,9 +1,9 @@
-title="(LAP)Machine"
-port=":8123"
-staticdir="assets/"
+title = "LAP Machine"
+port = ":8123"
+staticdir = "assets/"
 
 [routes]
-[routes.home]
-	handler = "HomeHandler"
-[routes.display]
-	handler = "DisplayHandler"
+	[routes.home]
+		handler = "HomeHandler"
+	[routes.display]
+		handler = "DisplayHandler"
