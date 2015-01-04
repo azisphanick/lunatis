@@ -1,6 +1,6 @@
-![(LAP)Machine](resources/lapmachine-logo.png)
+![Lunatis](resources/lunatis-logo.jpg)
 
-Welcome to (LAP)Machine project. What's that?, you ask. Well,
+Welcome to Lunatis project. What's that?, you ask. Well,
 
 > I'm an idealist. I don't know where I'm going, but I'm on my way.<br/>
 > -- Carl Sandburg
